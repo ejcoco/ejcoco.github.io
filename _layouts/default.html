@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {%- include head.html -%}
+</head>
+
+<body>
+  <main class="container">
+    <section class="about">
+      {% for author in site.authors %}
+      <img src="{{ author.image }}" alt="{{ author.name }}" />
+      <h2 id="title">
+        {{ author.name }}
+      </h2>
+      <p class="tagline">{{ author.tagline }}</p>
+      <ul class="social">
+        {%- if author.github -%}
+        <a href="https://github.com/{{ author.github }}">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if author.linkedIn -%}
+        <a href="https://www.linkedin.com/{{ author.linkedIn }}">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a>
+        {%- endif -%}
+      </ul>
+      {% endfor %}
+
+      {%- if site.plainwhite.navigation -%}
+      <nav class="navigation">
+        <ul>
+          {% for link in site.plainwhite.navigation %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {%- endif -%}
+
+      <p>&copy; {{ "now" | date: "%Y" }}</p>
+    </section>
+    <section class="content">
+      {{ content }}
+    </section>
+  </main>
+  {%- if site.plainwhite.analytics_id -%}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "{{ site.plainwhite.analytics_id }}");
+  </script>
+  {%- endif -%}
+</body>
+
+</html>
