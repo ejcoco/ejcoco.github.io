@@ -106,7 +106,11 @@ main {
     }
   }
 }
-#title {
+.author {
+  &::first-letter {
+    font-size: 150%;
+    // color: #8a2be2;
+  }
   a {
     text-decoration: none;
   }
@@ -139,7 +143,7 @@ main {
 
     a {
       display: block;
-      font-family: "Merriweather";
+      font-family: "Raleway";
       text-align: center;
       padding: 1rem 0;
       text-decoration: none;
@@ -159,6 +163,7 @@ main {
 }
 
 .post-categories {
+  font-family: "Montserrat", sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -181,6 +186,8 @@ main {
   min-width: 150px;
 }
 .post-info-container {
+  display: flex;
+  justify-content: space-between;
   padding: 0 20px 20px 0;
 }
 .post-info {
@@ -225,7 +232,7 @@ main {
   padding-left: 30px;
 }
 .post {
-  font-family: "Merriweather", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #222;
   line-height: 1.9em;
@@ -243,7 +250,7 @@ main {
   h4,
   h5,
   h6 {
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 }
 
@@ -255,4 +262,15 @@ main {
   letter-spacing: 0.5px;
   padding-bottom: 10px;
   font-weight: normal;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.img-print {
+  display: block;
+  border: 1px double black;
+  max-width: 800px;
+  margin: auto;
 }
