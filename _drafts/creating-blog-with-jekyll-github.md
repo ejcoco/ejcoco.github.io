@@ -65,3 +65,47 @@ Ao acessar o endereço, você verá algo assim:
 
 6. E pronto, seu github pages está online, no caso o nosso é `ejcoco.github.io`, o seu será `<repo>.github.io`
    ![criando um repositirio no github](/assets/posts/image07.png){:class="img-print"}
+
+
+## Tema
+Como vocês viram acima o GitHub pages trabalha com temas, mas não iremos utilizar uma tema, vamos nos basear em um e modifica-lo, eu vou me basear em um tema do [Samarjeet](https://github.com/thelehhman), o [plainwhite-jekyll](https://github.com/thelehhman/plainwhite-jekyll), 
+
+![tema plainwhite-jekyll](/assets/posts/image08.png){:class="img-print"} 
+1. Faça o download do projeto (.zip)
+![tema plainwhite-jekyll](/assets/posts/image09.png){:class="img-print"}
+Descompacte o conteudo do zip e cole na raiz do seu blog
+
+1.1. Copie
+![tema plainwhite-jekyll](/assets/posts/image10.png){:class="img-print"}
+
+1.2. Cole e substitua
+![tema plainwhite-jekyll](/assets/posts/image11.png){:class="img-print"}
+
+
+Após isso execute o comando `bundle exec jekyll serve`
+![comando para executar o jekyll](/assets/posts/image12.png){:class="img-print"}
+
+E você verá o seguinte ao acessar o [http://localhost:4000](http://localhost:4000)
+![comando para executar o jekyll](/assets/posts/image13.png){:class="img-print"}
+
+Bom, vamos modificar agora para o nosso gosto
+
+## Modificando
+
+Vamos editar o arquivo `_config.yml` na raiz do projeto.
+
+Ele se parece com isso agora:
+![_config.yml](/assets/posts/image14.png){:class="img-print"}
+
+Vamos modifica-lo para parecer com isso, removemos as linhas 14-18, e criamos a tag `authors`, que é um array `-` com duas posições, com nossos nomes e fotos e usuarios das redes sociais.
+![_config.yml](/assets/posts/image15.png){:class="img-print"}
+
+Vamos agora alterar o arquivo `layouts/default.html`
+![layouts/default.html](/assets/posts/image16.png){:class="img-print"}
+
+Ele ficou assim após nossas modificações
+![layouts/default.html](/assets/posts/image17.png){:class="img-print"}
+
+Qualquer modificação no arquivo `_config.yml`, precisa que os servidor seja reiniciado, após reiniciar veremos o seguinte:
+
+![_config.yml](/assets/posts/image18.png){:class="img-print"}
