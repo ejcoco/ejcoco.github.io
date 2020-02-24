@@ -20,6 +20,7 @@ authors:
     tagline: Developer
     github: julianesansil
     linkedIn: in/jlsansil
+analytics_id: UA-159001486-1
 plainwhite:
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
