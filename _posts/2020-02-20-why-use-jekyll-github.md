@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Eduardo
-reviewer: Juliane
+reviewer: Not Reviewed
 title: "Por que jekyll e github?"
 date: 2020-02-20 20:45:00 -0300
 categories: jekyll blog ejcoco

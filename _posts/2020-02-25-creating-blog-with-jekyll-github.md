@@ -1,10 +1,10 @@
 ---
 layout: post
 author: Eduardo
-reviewer: Juliane
+reviewer: Not Reviewed
 title: "Criando um blog com jekyll"
-date: 2020-02-11 21:00:57 -0300
-categories: jekyll blog ejcoco
+date: 2020-02-25 18:00:00 -0300
+categories: jekyll blog ejcoco github github pages
 ---
 
 Jekyll + GitHub = blogging
@@ -43,11 +43,8 @@ cd myblog && bundle exec jekyll serve
 Ao acessar o endereço, você verá algo assim:
 ![pagina padrão](/assets/posts/image01.png){:class="img-print"}
 
----
 
 ## Configurando o GitHub
-
-// falar sobre githubpages
 
 1. Crie uma repositório no github que tenha o sufixo `.github.io`, como na imagem abaixo
    ![criando um repositirio no github](/assets/posts/image02.png){:class="img-print"}
@@ -75,10 +72,10 @@ Como vocês viram acima o GitHub pages trabalha com temas, mas não iremos utili
 ![tema plainwhite-jekyll](/assets/posts/image09.png){:class="img-print"}
 Descompacte o conteudo do zip e cole na raiz do seu blog
 
-1.1. Copie
+    1.1. Copie
 ![tema plainwhite-jekyll](/assets/posts/image10.png){:class="img-print"}
 
-1.2. Cole e substitua
+    1.2. Cole e substitua
 ![tema plainwhite-jekyll](/assets/posts/image11.png){:class="img-print"}
 
 
@@ -106,6 +103,29 @@ Vamos agora alterar o arquivo `layouts/default.html`
 Ele ficou assim após nossas modificações
 ![layouts/default.html](/assets/posts/image17.png){:class="img-print"}
 
-Qualquer modificação no arquivo `_config.yml`, precisa que os servidor seja reiniciado, após reiniciar veremos o seguinte:
+> **_NOTA:_** Qualquer modificação no arquivo `_config.yml`, precisa que os servidor seja reiniciado, após reiniciar veremos o seguinte:
 
 ![_config.yml](/assets/posts/image18.png){:class="img-print"}
+
+
+
+## Posts
+
+O Jekyll utiliza um [padrão](https://jekyllrb.com/docs/posts/) para escrever os posts, `YEAR-MONTH-DAY-title.MARKUP` deve ser o nome do arquivo para ser postado. No caso podemos usar a extensão `.md` ou `.markdown`
+
+![postando](/assets/posts/image19.png){:class="img-print"}
+
+O arquivo também deve começar com um cabeçalho que conter algumas informações sobre o post, ex: o layout do post, titulo, data, categorias. Você também pode criar atributos personalizados caso precise, ai é só editar o arquivo `layouts/post.html` e ajustar como quiser.
+![postando](/assets/posts/image20.png){:class="img-print"}
+
+> **_NOTA:_** Você pode criar posts com uma data futura, ai eles só irão ficar disponíveis quando chegar na data.
+
+
+![postando](/assets/posts/image21.png){:class="img-print"}
+
+
+## Fim
+Com isso terminamos de configurar nosso blog!
+Ainda tem muitas coisas para fazer como ajustar uns estilos de css, temas, cores, etc etc... 
+
+Mas no geral é isso. Por enquanto não temos comentários, acho q vou usar o discord, quando adicionar, escreverei um post sobre isso.

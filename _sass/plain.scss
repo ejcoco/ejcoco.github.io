@@ -274,3 +274,20 @@ main {
   max-width: 800px;
   margin: auto;
 }
+.box {
+  padding: 20px;
+  color: #000;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.box.success {
+  background-color: #4caf5061;
+}
+.box.info {
+  background-color: #2196f361;
+}
+.box.warning {
+  background-color: #ff980061;
+}
