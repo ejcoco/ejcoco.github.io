@@ -1,0 +1,18 @@
+<button id="burger" class="open-main-nav">
+  <span class="burger"></span>
+  <span class="burger-text">Sobre</span>
+</button>
+<nav class="main-nav" id="main-nav">
+  {%- include about.html -%}
+</nav>
+<script>
+  let burger = document.getElementById('burger'),
+    nav = document.getElementById('main-nav'),
+    slowmo = document.getElementById('slowmo');
+
+  burger.addEventListener('click', function (e) {
+    this.classList.toggle('is-open');
+    nav.classList.toggle('is-open');
+  });
+
+</script>
