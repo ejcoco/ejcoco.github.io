@@ -1,0 +1,32 @@
+<div id="logo">
+  <a href="/">
+    <img src="/assets//logo.png" alt="logo" />
+  </a>
+</div>
+<div id="authors">
+  {% for author in site.authors %}
+  <img src="{{ author.image }}" alt="{{ author.name }}" />
+  <h2 class="author">
+    {{ author.name }}
+  </h2>
+  <p class="tagline">{{ author.tagline }}</p>
+  <ul class="social">
+    {%- if author.github -%}
+    <li>
+      <a href="https://github.com/{{ author.github }}">
+        <i class="icon-github-circled"></i>
+      </a>
+    </li>
+    {%- endif -%}
+    {%- if author.linkedIn -%}
+    <li>
+      <a href="https://www.linkedin.com/{{ author.linkedIn }}">
+        <i class="icon-linkedin-squared"></i>
+      </a>
+    </li>
+    {%- endif -%}
+  </ul>
+  {% endfor %}
+</div>
+
+<p>&copy; {{ "now" | date: "%Y" }}</p>

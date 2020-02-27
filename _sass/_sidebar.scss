@@ -1,0 +1,55 @@
+#viewport {
+  display: flex;
+}
+
+#sidebar {
+  max-width: 250px;
+  min-width: 250px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+#content {
+  //   min-width: 100%;
+}
+#logo-mobile {
+  width: 100px;
+  padding-left: 20px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+#logo {
+  text-align: center;
+  margin-top: 45px;
+  img {
+    width: 100px;
+  }
+}
+
+#authors {
+  padding: 20px;
+  text-align: center;
+  img {
+    width: 50%;
+    border-radius: 50%;
+  }
+}
+
+.social {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 45px;
+  a {
+    text-decoration: none;
+  }
+  li {
+    display: inline-block;
+    i {
+      font-size: 34px;
+    }
+  }
+}

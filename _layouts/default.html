@@ -1,70 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   {%- include head.html -%}
 </head>
+<div id="viewport">
+  <section id="menu">
+    {%- include menu-mobile.html -%}
+  </section>
+  <section id="sidebar">
+    {%- include about.html -%}
+  </section>
 
-<body>
-  <main class="container">
-    <section class="about">
+  <section id="content">
+    <div id="logo-mobile">
       <a href="/">
-        <img src="/assets//logo.png" alt="logo" style="width: 100px; margin-bottom: 50px; margin-top:45px;" />
+        <img src="/assets//logo.png" alt="logo" />
       </a>
-      {% for author in site.authors %}
-      <img src="{{ author.image }}" alt="{{ author.name }}" />
-      <h2 class="author">
-        {{ author.name }}
-      </h2>
-      <p class="tagline">{{ author.tagline }}</p>
-      <ul class="social">
-        {%- if author.github -%}
-        <a href="https://github.com/{{ author.github }}">
-          <li>
-            <i class="icon-github-circled"></i>
-          </li>
-        </a>
-        {%- endif -%}
-        {%- if author.linkedIn -%}
-        <a href="https://www.linkedin.com/{{ author.linkedIn }}">
-          <li>
-            <i class="icon-linkedin-squared"></i>
-          </li>
-        </a>
-        {%- endif -%}
-      </ul>
-      {% endfor %}
+    </div>
+    {{ content }}
+  </section>
+</div>
+{%- if site.analytics_id -%}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.analytics_id}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
-      {%- if site.plainwhite.navigation -%}
-      <nav class="navigation">
-        <ul>
-          {% for link in site.plainwhite.navigation %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-      {%- endif -%}
+  gtag('config', '{{site.analytics_id}}');
+</script>
 
-      <p>&copy; {{ "now" | date: "%Y" }}</p>
-    </section>
-    <section class="content">
-      {{ content }}
-    </section>
-  </main>
-  {%- if site.analytics_id -%}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{site.analytics_id}}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', '{{site.analytics_id}}');
-  </script>
-
-  {%- endif -%}
+{%- endif -%}
 </body>
 
 </html>
